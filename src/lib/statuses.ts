@@ -77,3 +77,20 @@ export const getGuessStatuses = (
 
   return statuses
 }
+
+export const getGuessFrequencies = (
+  solution: string,
+  guesses: string
+): number[] => {
+  let freq: number[] = []
+  for(let i=0;i<guesses.length;i++) {
+    let cnt = 0
+    for(let j=0;j<solution.length;j++) {
+      if(guesses[i]===solution[j]) {
+        cnt++;
+      }
+    }
+    freq.push(cnt)
+  }
+  return freq
+}

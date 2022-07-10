@@ -1,5 +1,3 @@
-import { WORDS } from '../constants/wordlist'
-import { VALID_GUESSES } from '../constants/validGuesses'
 import { WRONG_SPOT_MESSAGE, NOT_CONTAINED_MESSAGE } from '../constants/strings'
 import { getGuessStatuses } from './statuses'
 import { default as GraphemeSplitter } from 'grapheme-splitter'
@@ -9,10 +7,13 @@ export const firstGameDate = new Date(2022, 0)
 export const periodInDays = 1
 
 export const isWordInWordList = (word: string) => {
-  return (
-    WORDS.includes(localeAwareLowerCase(word)) ||
-    VALID_GUESSES.includes(localeAwareLowerCase(word))
-  )
+  // TODO : Code to check valid input
+
+  // return (
+  //   WORDS.includes(localeAwareLowerCase(word)) ||
+  //   VALID_GUESSES.includes(localeAwareLowerCase(word))
+  // )
+  return true
 }
 
 export const isWinningWord = (word: string) => {
@@ -111,21 +112,24 @@ export const getIndex = (today: Date) => {
 
   return index
 }
-
-export const getWordOfDay = (index: number) => {
-  if (index < 0) {
-    throw new Error('Invalid index')
+export const  getColorOfDay = (index: number) => {
+  var letters = '0123456789ABCDEF';
+  var color = '';
+  var random = index
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(random % 16)];
+    random *= index;
   }
-
-  return localeAwareUpperCase(WORDS[index % WORDS.length])
+  return color;
 }
 
 export const getSolution = (today: Date) => {
   const nextGameDate = getNextGameDate(today)
   const index = getIndex(today)
-  const wordOfTheDay = getWordOfDay(index)
+  const colorOfTheDay = getColorOfDay(index)
+  console.log(colorOfTheDay)
   return {
-    solution: wordOfTheDay,
+    solution: colorOfTheDay,
     solutionIndex: index,
     tomorrow: nextGameDate.valueOf(),
   }
