@@ -207,3 +207,4 @@ To enable Plausible Analytics:
 - [0xdle](https://0xdle.vercel.app/): Hexadecimal
 
 _Want to add one to the list? Just make a pull request or [let us know via a comment here](https://github.com/cwackerfuss/react-wordle/issues/120)_
+# Hexedle
