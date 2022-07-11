@@ -21,7 +21,7 @@ export const CompletedRow = ({ solution, guess, isRevealing }: Props) => {
           key={i}
           value={letter}
           status={statuses[i]}
-          count={statuses[i]==='present'?frequencies[i]:0}
+          count={statuses[i]==='correct'?frequencies[i]:0}
           position={i}
           isRevealing={isRevealing}
           isCompleted

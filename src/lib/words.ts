@@ -127,7 +127,6 @@ export const getSolution = (today: Date) => {
   const nextGameDate = getNextGameDate(today)
   const index = getIndex(today)
   const colorOfTheDay = getColorOfDay(index)
-  console.log(colorOfTheDay)
   return {
     solution: colorOfTheDay,
     solutionIndex: index,
