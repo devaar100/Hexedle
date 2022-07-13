@@ -265,7 +265,7 @@ function App() {
         <div className="flex justify-center">
           <div
             style={{
-              marginBottom: '8%',
+              marginBottom: '6%',
               height: 48,
               width: 48,
               borderRadius: 24,

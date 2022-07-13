@@ -39,6 +39,11 @@ export const Grid = ({
       {empties.map((_, i) => (
         <EmptyRow key={i} />
       ))}
+      <div className='flex justify-center text-3l text-white'>
+        <text style={{width: 115, textAlign: "center"}}>Red</text>
+        <text style={{width: 115, textAlign: "center"}}>Green</text>
+        <text style={{width: 115, textAlign: "center"}}>Blue</text>
+      </div>
     </>
   )
 }
