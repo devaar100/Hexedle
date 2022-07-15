@@ -10,7 +10,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-      Guess the HEXEDLE from the colour in 5 tries.<br/><br/> 
+      Guess the CHROMADLE from the colour in 5 tries.<br/><br/> 
       Each guess must be a valid hex code. Hit the enter key/button to submit.<br/><br/>
       After each guess, the colour of the tiles will change to show how close your 
       guess was to the hex code.  A number may appear at the top right indicating the frequency of an alphanumeric.
@@ -79,7 +79,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <div style={{width: "100%", height: 1, backgroundColor: "#777", marginTop: 20, marginBottom: 20}}/>
 
       <p className="text-sm text-gray-500 dark:text-gray-300">
-      A new HEXEDLE will be available every day!
+      A new CHROMADLE will be available every day!
       </p>
 
       {/* <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
