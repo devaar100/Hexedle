@@ -26,16 +26,18 @@ export const Key = ({
   // const isHighContrast = getStoredIsHighContrastMode()
 
   const classes = classnames(
-    'flex items-center justify-center mx-0.5 text-l font-bold cursor-pointer select-none dark:text-white',
+    'flex items-center justify-center mx-0.5 text-l font-bold cursor-pointer select-none dark:text-white rounded-full',
     {
-      'text-white rounded-full': true
+      'bg-[#1c1c1c]' : status===undefined || status==='absent',
+      'bg-blue-500 border-blue-500' : status==='correct',
+      'bg-yellow-500 border-yellow-500' : status==='present'
     }
   )
 
   const styles = {
     width: `${width}px`,
     height: '40px',
-    backgroundColor: '#1c1c1c'
+    animationDelay: `${keyDelayMs}ms`
   }
 
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
