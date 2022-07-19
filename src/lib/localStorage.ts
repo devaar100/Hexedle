@@ -45,5 +45,6 @@ export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
 
 export const getStoredIsHighContrastMode = () => {
   const highContrast = localStorage.getItem(highContrastKey)
-  return highContrast === '1'
+  // return highContrast === '1'
+  return false
 }

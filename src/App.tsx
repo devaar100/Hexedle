@@ -128,7 +128,8 @@ function App() {
   }, [isDarkMode, isHighContrastMode])
 
   const handleDarkMode = (isDark: boolean) => {
-    setIsDarkMode(isDark)
+    // setIsDarkMode(isDark)
+    setIsDarkMode(true)
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
   }
 
