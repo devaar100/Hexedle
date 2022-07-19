@@ -28,7 +28,8 @@ export const Key = ({
   const classes = classnames(
     'flex items-center justify-center mx-0.5 text-l font-bold cursor-pointer select-none dark:text-white rounded-full',
     {
-      'bg-[#1c1c1c]' : status===undefined || status==='absent',
+      'bg-[#1c1c1c]' : status===undefined,
+      'dark:bg-neutral-700 dark:border-neutral-700' : status==='absent',
       'bg-blue-500 border-blue-500' : status==='correct',
       'bg-yellow-500 border-yellow-500' : status==='present'
     }
